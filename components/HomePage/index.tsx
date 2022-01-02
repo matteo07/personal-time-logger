@@ -19,7 +19,10 @@ const HomePage: FC<HomePageProps> = ({day: {id, hours}, keys}) => {
           <Title>day: Jan 2</Title>
           <ActivityPickerIcon activity={activeActivity} setActivity={() => setPickerOpened(!pickerOpened)}/>
         </HeadingWrapper>
-        {pickerOpened && <ActivityPicker activity={activeActivity}/>}
+        <ActivityPicker opened={pickerOpened} activity={activeActivity} setActivity={(activity) => {
+          setActivity(activity)
+          setPickerOpened(false)
+        }}/>
         <Br/>
         {keys.map((hourKey) => <HourView key={`hour-${id}-${hourKey}`} hour={hourKey} activity={hours[hourKey]}/>)}
       </PageContent>
