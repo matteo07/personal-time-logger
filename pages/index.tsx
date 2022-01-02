@@ -5,7 +5,7 @@ const Home: NextPage = () => {
   const currentDay: Day = { id: 2, start: 10, end: 2, hours: { 10: "home", 11: 'home', 12: 'out' } }
 
   return (
-    <a >{JSON.stringify(currentDay)}</a>
+    <>{JSON.stringify(currentDay)}</>
   )
 }
 

@@ -11,10 +11,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>Personal Time Logger</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <GlobalStyle />
       <Layout>
         <Component {...pageProps} />
       </Layout>
+      <GlobalStyle />
     </>)
 }
 
