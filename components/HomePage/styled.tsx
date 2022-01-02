@@ -10,6 +10,12 @@ export const HeadingWrapper = styled.div`
 export const HoursWrapper = styled.div`
   overflow: scroll;
   padding-bottom: 240px;
+
+  -ms-overflow-style: none;  /* IE and Edge */
+  ˚scrollbar-width: none;  /* Firefox */
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `
 
 export const PageContent = styled.div`
