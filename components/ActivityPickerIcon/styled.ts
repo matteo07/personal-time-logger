@@ -8,4 +8,7 @@ export const ActivityPickerWrapper = styled.div<{color: Activity['color']}>`
   background: ${({color}) => color};
   border-radius: 24px;
   border: solid 6px white;
+  &:hover {
+    border: solid 6px ${({color}) => color};
+  }
 `
