@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const HeadingWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+`
+
 export const PageContent = styled.div`
   max-width: 400px;
   margin: 0 auto;

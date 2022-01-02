@@ -10,11 +10,11 @@ const getHourKeys = (start: Hour, end: Hour) => {
   return res
 }
 
-const EXERCISE: Activity = {name: 'exercise', color: '#018E42'}
-const FOOD: Activity = {name: 'food', color: '#8A2BE2'}
-const HOME: Activity = {name: 'home', color: '#ADFF2F'}
-const OUT: Activity = {name: 'out', color: '#FB4D3D'}
-const WORK: Activity = {name: 'work', color: '#5FB0B7'}
+export const EXERCISE: Activity = {name: 'exercise', color: '#018E42'}
+export const FOOD: Activity = {name: 'food', color: '#8A2BE2'}
+export const HOME: Activity = {name: 'home', color: '#ADFF2F'}
+export const OUT: Activity = {name: 'out', color: '#FB4D3D'}
+export const WORK: Activity = {name: 'work', color: '#5FB0B7'}
 
 const useDay = () => {
   const day: Day = {
