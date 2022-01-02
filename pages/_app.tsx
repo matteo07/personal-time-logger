@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import Layout from "../components/Layout";
+// import Layout from "../components/Layout";
 import { GlobalStyle } from "../components/GlobalStyled";
 import Head from "next/head";
 
@@ -11,9 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>Personal Time Logger</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <Component {...pageProps} />
       <GlobalStyle />
     </>)
 }

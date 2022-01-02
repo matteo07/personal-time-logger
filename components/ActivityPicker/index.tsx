@@ -1,11 +1,14 @@
 import React, {FC} from 'react';
-import {ActivityPickerWrapper} from "./styled";
 import {Activity} from "../../types";
-import {WORK} from "../../hooks/useDay";
+import {ActivityPickerWrapper} from "./styled";
 
-const ActivityPicker: FC<{ activity: Activity, setActivity:  React.Dispatch<React.SetStateAction<Activity>> }> = ({activity, setActivity}) => {
+
+type ActivityPickerProps = { activity: Activity}
+const ActivityPicker: FC<ActivityPickerProps> = ({activity}) => {
   return (
-    <ActivityPickerWrapper color={activity.color} onClick={() => setActivity(WORK)} />
+    <ActivityPickerWrapper>
+
+    </ActivityPickerWrapper>
   );
 };
 

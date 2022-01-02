@@ -4,6 +4,7 @@ export const HeadingWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  padding-top: 16px;
 `
 
 export const PageContent = styled.div`
