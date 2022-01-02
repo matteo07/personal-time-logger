@@ -1,6 +1,5 @@
 import React, {FC, useState} from 'react';
-import {Activity, Day, Hour} from "../../types";
-import {Br, HeadingWrapper, PageContent, Title} from "./styled";
+import {Br, HeadingWrapper, HoursWrapper, PageContent, Title} from "./styled";
 import HourView from "../HourView";
 import useDay, {HOME} from "../../hooks/useDay";
 import ActivityPickerIcon from "../ActivityPickerIcon";
@@ -24,8 +23,10 @@ const HomePage: FC = () => {
           setPickerOpened(false)
         }}/>
         <Br/>
-        {keys.map((hourKey) => (
-          <HourView cancelActivity={() => setDayActivity(hourKey, undefined, id)}  addActivity={() => setDayActivity(hourKey, activeActivity, id)} key={`hour-${id}-${hourKey}`} hour={hourKey} activity={hours[hourKey]}/>))}
+        <HoursWrapper>
+          {keys.map((hourKey) => (
+            <HourView cancelActivity={() => setDayActivity(hourKey, undefined, id)}  addActivity={() => setDayActivity(hourKey, activeActivity, id)} key={`hour-${id}-${hourKey}`} hour={hourKey} activity={hours[hourKey]}/>))}
+        </HoursWrapper>
       </PageContent>
     </>
   );
