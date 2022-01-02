@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const PageContent = styled.div`
-  max-width: 480px;
+  max-width: 400px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

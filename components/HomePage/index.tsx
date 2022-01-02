@@ -8,7 +8,7 @@ type HomePageProps = { day: Day; keys: Hour[] }
 const HomePage: FC<HomePageProps> = ({day: {id, hours}, keys}) => {
   return (
     <PageContent>
-      <Title>Current day: {id}</Title>
+      <Title>day: Jan 2</Title>
       <Br/>
       {keys.map((hourKey) => <HourView key={`hour-${id}-${hourKey}`} hour={hourKey} activity={hours[hourKey]}/>)}
     </PageContent>
