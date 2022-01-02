@@ -1,14 +1,14 @@
 import React, {FC, useState} from 'react';
-import {Day, Hour} from "../../types";
+import {Activity, Day, Hour} from "../../types";
 import {Br, HeadingWrapper, PageContent, Title} from "./styled";
 import HourView from "../HourView";
-import {HOME} from "../../hooks/useDay";
+import useDay, {HOME} from "../../hooks/useDay";
 import ActivityPickerIcon from "../ActivityPickerIcon";
 import ActivityPicker from "../ActivityPicker";
 
-type HomePageProps = { day: Day; keys: Hour[] }
 
-const HomePage: FC<HomePageProps> = ({day: {id, hours}, keys}) => {
+const HomePage: FC = () => {
+  const { day: {id, hours}, keys, setDayActivity } = useDay()
   const [activeActivity, setActivity] = useState(HOME)
   const [pickerOpened, setPickerOpened] = useState(false)
 
@@ -24,7 +24,8 @@ const HomePage: FC<HomePageProps> = ({day: {id, hours}, keys}) => {
           setPickerOpened(false)
         }}/>
         <Br/>
-        {keys.map((hourKey) => <HourView key={`hour-${id}-${hourKey}`} hour={hourKey} activity={hours[hourKey]}/>)}
+        {keys.map((hourKey) => (
+          <HourView cancelActivity={() => setDayActivity(hourKey, undefined, id)}  addActivity={() => setDayActivity(hourKey, activeActivity, id)} key={`hour-${id}-${hourKey}`} hour={hourKey} activity={hours[hourKey]}/>))}
       </PageContent>
     </>
   );

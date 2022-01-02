@@ -14,6 +14,6 @@ export type Activity = {
 export type Day = {
   end: Hour
   hours: Partial<Record<Hour, Activity>>
-  id: Number
+  id: number
   start: Hour
 }

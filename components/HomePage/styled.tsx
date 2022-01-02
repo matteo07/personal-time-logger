@@ -5,7 +5,6 @@ export const HeadingWrapper = styled.div`
   justify-content: space-between;
   width: 100%;
   padding-top: 16px;
-  position: sticky;
 `
 
 export const PageContent = styled.div`
