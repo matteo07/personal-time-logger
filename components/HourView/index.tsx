@@ -1,6 +1,6 @@
 import {FC} from "react";
 import {Activity, Hour} from "../../types";
-import {Action, HourWrapper} from './styled'
+import {Action, HourWrapper, Color, FlexSpacer, Cancel, Spaced} from './styled'
 
 const HourView: FC<{ activity?: Activity, hour: Hour }> = ({activity, hour}) => {
   const formattedHour = hour.toLocaleString('en-US', {
@@ -9,10 +9,13 @@ const HourView: FC<{ activity?: Activity, hour: Hour }> = ({activity, hour}) => 
   })
 
   if (!activity) {
-    return <HourWrapper><p>  {formattedHour}: <Action>add+ </Action></p></HourWrapper>
+    return <HourWrapper><p>  {formattedHour}{'  '}</p><Action>+ add activity + </Action></HourWrapper>
   }
   return (<HourWrapper>
-    {'  '}{formattedHour}: {activity.toUpperCase()}
+    {'  '}{formattedHour}: {activity.name.toUpperCase()}
+    <FlexSpacer />
+    <Color color={activity.color} />
+    <Spaced><Cancel>X</Cancel></Spaced>
   </HourWrapper>)
 }
 
