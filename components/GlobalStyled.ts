@@ -1,11 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
-  body, html {
-    background-color: black;
-    color: white;
-  }
-  
   // RESET CSS
   
   html, body, div, span, applet, object, iframe,
@@ -25,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     border: 0;
     font-size: 100%;
-    font-family: Lato, sans-serif;
+    font-family: 'VT323', monospace;
     vertical-align: baseline;
   }
 
@@ -46,5 +41,13 @@ export const GlobalStyle = createGlobalStyle`
   table {
     border-collapse: collapse;
     border-spacing: 0;
+  }
+  
+  // CUSTOM
+
+  body, html {
+    background-color: black;
+    color: white;
+    font-size: 48px;
   }
 `

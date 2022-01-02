@@ -9,7 +9,7 @@ export default class MyDocument extends Document {
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <link rel="dns-prefetch" href="//fonts.googleapis.com" />
           <link
-            href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,900&display=optional"
+            href="https://fonts.googleapis.com/css?family=VT323&display=optional"
             rel="stylesheet"
             type="text/css"
           />
